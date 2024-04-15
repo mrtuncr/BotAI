@@ -82,7 +82,7 @@ export default function Index() {
               className="bg-gray-100 text-gray-900 py-2 px-4 my-8"
               onClick={cancel}
             >
-              Stop generating
+              Yazmayı durdur..
             </button>
           )}
         </div>
@@ -105,14 +105,14 @@ export default function Index() {
                   setMessage("");
                 }}
               >
-                Clear
+                Temizle
               </button>
             ) : null}
             <input
               type="text"
               ref={inputRef}
               className="w-full rounded-l-lg p-2 outline-none"
-              placeholder={state == "idle" ? "Type your message..." : "..."}
+              placeholder={state == "idle" ? "Mesajınızı giriniz.." : "..."}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               disabled={state !== "idle"}
@@ -122,7 +122,7 @@ export default function Index() {
                 className="bg-blue-700 text-white font-bold py-2 px-4 rounded-r-lg"
                 type="submit"
               >
-                Send
+                Gönder
               </button>
             ) : null}
           </form>
